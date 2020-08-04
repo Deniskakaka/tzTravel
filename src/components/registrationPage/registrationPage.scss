@@ -1,0 +1,92 @@
+@import "../../breakpoints.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+}
+
+.formAuthorization {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 550px;
+  height: 650px;
+  background-color: #ffffff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+  @include for-large-up() {
+    width: 350px;
+    height: 500px;
+  }
+
+  &__image {
+    height: 300px;
+    width: 100%;
+    border: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    @include for-large-up() {
+      height: 200px;
+    }
+  }
+
+  &__mail,
+  &__password {
+    width: 80%;
+    height: 20px;
+    display: flex;
+    justify-content: space-around;
+
+    @include for-large-up() {
+      width: 95%;
+    }
+
+    & input {
+      border: none;
+      border-bottom: 1px solid #ddd;
+      width: 80%;
+      outline: none;
+      font-size: 15px;
+    }
+
+    & span {
+      align-self: flex-start;
+      margin-right: 10px;
+    }
+  }
+
+  &__send {
+    background-color: #5c4;
+    padding: 20px 25px;
+    border: none;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 25px;
+
+    @include for-large-up() {
+      padding: 15px 20px;
+    }
+  }
+}
+
+.formAuthorization__password-wrong {
+  position: absolute;
+  bottom: 115px;
+  color: red;
+}
+
+.formAuthorization__mail-wrong {
+  position: absolute;
+  bottom: 210px;
+  color: red;
+}

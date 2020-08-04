@@ -1,0 +1,109 @@
+@import "../../breakpoints.scss";
+
+.mainPage {
+  display: flex;
+  justify-content: space-around;
+  background-image: url("https://images.wallpaperscraft.ru/image/les_tuman_temnyj_127172_1920x1080.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
+
+  @include for-large-up() {
+    flex-direction: column;
+  }
+
+  &__saidBar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-top: 50px;
+    height: 90%;
+    width: 200px;
+
+    @include for-large-up() {
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      width: 320px;
+      padding-left: 0;
+    }
+
+    & button {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+
+      & img {
+        width: 35px;
+        height: 35px;
+        margin-right: 5px;
+      }
+    }
+
+    & a {
+      margin-bottom: 10px;
+      padding: 0;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 20px;
+      height: 50px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.mainPage-content {
+  width: 45%;
+  height: 650px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 10px;
+
+  @include for-large-up() {
+    width: 90%;
+  }
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  border: 1px solid grey;
+  border-radius: 10px;
+  color: #ffffff;
+  margin-bottom: 10px;
+
+  & p {
+    width: 250px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  &__button {
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+ul {
+  padding: 0;
+}
+
+.light{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #52FF33;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.8s ease;
+}

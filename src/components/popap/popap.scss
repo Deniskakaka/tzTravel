@@ -1,0 +1,45 @@
+.popap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: none;
+
+    &__text{
+        border: none;
+        resize: none;
+        outline: none;
+    }
+
+    &__whom{
+        border: none;
+        border-bottom: 1px solid whitesmoke;
+        outline: none;
+        width: 92%;
+    }
+
+    &__submit,
+    &__cancel{
+        padding: 20px 35px;
+        background-color: #68FF33;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        margin-right: 10px;
+        font-size: 18px;
+    }
+
+    &__cancel{
+        background-color: #FF3358;
+        color: #ffffff;
+    }
+}
+
+.popap-buttons{
+    display: flex;
+}
