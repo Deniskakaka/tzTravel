@@ -14,10 +14,10 @@
 There are two users in the project.</p> 
 
 <p>first user:
- <b>email:denis1990@mail.com</b>
+ <b>email:denis1990@mail.com;</b>
  <b>password: 12345</b></p>
 <p>second user :
- <b>email:oleg1986@gmail.com</b>
+ <b>email:oleg1986@gmail.com;</b>
  <b>password:54321</b></p>
  
 <p>to authenticate by typing in the email and password of one of the users. 
