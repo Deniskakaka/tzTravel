@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 import Incoming from "../incoming/Incoming.jsx";
 import Outgoing from "../outgoing/Outgoing.jsx";
 import Deleted from "../deleted/Deleted.jsx";
-import { get, change } from "../../redux/actionsMain.js";
+import { get, change, create } from "../../redux/actionsMain.js";
 import { incomingMessage, outcomingMessage, deletedMessages } from "../../redux/option.selector.js";
 import Popap from "../popap/Popap.jsx";
 import "./mainPage.scss";
 
-function MainPage({ get, messagesIncoming, messagesOutcoming, messagesDeleted, email, change }) {
+function MainPage({ get, messagesIncoming, messagesOutcoming, messagesDeleted, email, change, createMessage }) {
 
     const location = useLocation().pathname.slice(1);
     useEffect(() => {
@@ -46,7 +46,7 @@ function MainPage({ get, messagesIncoming, messagesOutcoming, messagesDeleted, e
                     <Route path={"/deleted"}><Deleted messages={messagesDeleted} email={email}></Deleted></Route>
                 </Switch>
             </div>
-            {showPopap ? <Popap get={get} email={email} closePopap={setShowPopap}></Popap> : ""}
+            {showPopap ? <Popap createMessage={createMessage} email={email} closePopap={setShowPopap}></Popap> : ""}
         </section>
     )
 };
@@ -62,7 +62,8 @@ const mapState = state => {
 
 const mapDispatch = {
     get: get,
-    change: change
+    change: change,
+    createMessage: create
 }
 
 export default connect(mapState, mapDispatch)(MainPage)

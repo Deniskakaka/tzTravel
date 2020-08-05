@@ -15,7 +15,6 @@ function App() {
                         : <ReagistrationPage
                             path="/"
                             checkValidate={setMainPage}
-                            mainPage={mainPage}
                         />
                 }></Route>
             </Switch>

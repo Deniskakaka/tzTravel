@@ -1,4 +1,4 @@
-import { getMessage, changeMessage } from "../gateAwayFunctions.js";
+import { getMessage, changeMessage, createMessage } from "../gateAwayFunctions.js";
 
 export const LIST_MESSAGES = "LIST_MESSAGES";
 export const EMAIL_USER = "EMAIL_USER";
@@ -30,5 +30,11 @@ export function get () {
 export function change (id, message) {
     return function(dispatch) {
         changeMessage(id, message).then(() => dispatch(get()))
+    }
+}
+
+export function create (obj) {
+    return function(dispatch) {
+        createMessage(obj).then(() => dispatch(get()))
     }
 }

@@ -1,6 +1,5 @@
 export function check(
   func,
-  mainPage,
   array,
   email,
   password,
@@ -9,7 +8,7 @@ export function check(
   getEmailUser
 ) {
   if (array.some(i => i.email === email && i.password === +password)) {
-    func((mainPage = true)), 
+    func((true)), 
     getEmailUser(email)
   }
   if (!array.some(i =>  i.email === email)) changeWrongEmail();

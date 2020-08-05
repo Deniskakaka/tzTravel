@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { createMessage } from "../../gateAwayFunctions.js";
 import "./popap.scss";
 
-function Popap({ get, email, closePopap }) {
+function Popap({ get, email, closePopap, createMessage }) {
 
     const [whom, setWhom] = useState("");
     const [text, setText] = useState("");
@@ -28,8 +27,7 @@ function Popap({ get, email, closePopap }) {
                 <button
                     type="submit"
                     className="popap__submit"
-                    onClick={() => createMessage({ "whom": whom, "text": text, "status": "outcoming", "email": email },
-                        setTimeout(() => get(), 1000))}
+                    onClick={() => createMessage({ "whom": whom, "text": text, "status": "outcoming", "email": email })}
                 >Submit
                 </button>
                 <button className="popap__cancel" onClick={() => closePopap(false)}>Cancel</button>

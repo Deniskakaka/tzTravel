@@ -83,7 +83,6 @@ class ReagistrationPage extends React.Component {
                     className="formAuthorization__send"
                     onClick={() => check(
                         this.props.checkValidate,
-                        this.props.mainPage,
                         this.props.users,
                         this.state.email,
                         this.state.password,
