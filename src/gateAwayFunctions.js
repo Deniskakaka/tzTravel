@@ -19,5 +19,7 @@ export const changeMessage = (id, message) => {
     ...message,
     status: "deleted",
   };
-  return axios.put(`${baseUrl}/${id}`, newStatus);
+  return axios
+    .put(`${baseUrl}/${id}`, newStatus)
+    .catch((error) => console.log(error));
 };
