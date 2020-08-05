@@ -10,12 +10,14 @@
 
 <p>In order to run the project locally, the first clone the repository the second using the command line, go to the root of the project and use the command npm start to run it.
 There are two users in the project.</p> 
-first:
+
+first user:
  <b>email:denis1990@mail.com</b>
  <b>password: 12345</b>
-the second one:
+second user :
  <b>email:oleg1986@gmail.com</b>
  <b>password:54321</b>
+ 
 <p>to authenticate by typing in the email and password of one of the users. 
 Inbound messages are stored on the server because there is no possibility
 to receive them in the project from where I created them myself,
