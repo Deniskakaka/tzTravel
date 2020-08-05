@@ -1,7 +1,8 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 function Outgoing({ messages, email, change }) {
-
+    
     return (
         <div className="OutgoingMessages">
             {messages.filter(elem => elem.email === email).map(elem => {
@@ -16,5 +17,10 @@ function Outgoing({ messages, email, change }) {
         </div>
     )
 };
+
+Outgoing.propTypes = {
+    messages: PropTypes.array,
+    email: PropTypes.string
+}
 
 export default Outgoing;

@@ -8,6 +8,7 @@ import Deleted from "../deleted/Deleted.jsx";
 import { get, change, create } from "../../redux/actionsMain.js";
 import { incomingMessage, outcomingMessage, deletedMessages } from "../../redux/option.selector.js";
 import Popap from "../popap/Popap.jsx";
+import PropTypes from 'prop-types';
 import "./mainPage.scss";
 
 function MainPage({ get, messagesIncoming, messagesOutcoming, messagesDeleted, email, change, createMessage }) {
@@ -64,6 +65,12 @@ const mapDispatch = {
     get: get,
     change: change,
     createMessage: create
+}
+
+MainPage.propTypes = {
+    messagesIncoming: PropTypes.array,
+    messagesOutcoming: PropTypes.array,
+    messagesDeleted: PropTypes.array,
 }
 
 export default connect(mapState, mapDispatch)(MainPage)

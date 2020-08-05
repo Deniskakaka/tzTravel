@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 function Incoming({ messages, email, change }) {
     return (
@@ -17,5 +18,10 @@ function Incoming({ messages, email, change }) {
         </div>
     )
 };
+
+Incoming.propTypes = {
+    messages: PropTypes.array,
+    email: PropTypes.string
+}
 
 export default Incoming;

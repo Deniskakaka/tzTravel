@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 function Deleted({ messages, email }) {
     return (
@@ -11,6 +12,11 @@ function Deleted({ messages, email }) {
             })}
         </div>
     )
+}
+
+Deleted.propTypes = {
+    messages: PropTypes.array,
+    email: PropTypes.string
 }
 
 export default Deleted;

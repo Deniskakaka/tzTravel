@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from 'prop-types';
 import "./popap.scss";
 
 function Popap({ email, closePopap, createMessage }) {
@@ -18,7 +19,7 @@ function Popap({ email, closePopap, createMessage }) {
     function onChangeText(event) {
         setText(event.target.value)
     }
-
+    
     return (
         <form className="popap" onSubmit={onsubmit}>
             <input type="text" value={whom} onChange={onChangeWhom} placeholder="Whom" className="popap__whom" />
@@ -36,5 +37,8 @@ function Popap({ email, closePopap, createMessage }) {
     )
 };
 
+Popap.propTypes = {
+    email: PropTypes.string,
+}
 
 export default Popap
