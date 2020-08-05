@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./popap.scss";
 
-function Popap({ get, email, closePopap, createMessage }) {
+function Popap({ email, closePopap, createMessage }) {
 
     const [whom, setWhom] = useState("");
     const [text, setText] = useState("");
