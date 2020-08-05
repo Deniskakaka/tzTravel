@@ -8,7 +8,7 @@
   <li><a href="https://redux.js.org/">REDUX</a></li>
 </ol>
 
-<h2>Description project</h2>
+<h2>Project description</h2>
 
 <p>In order to run the project locally, the first clone the repository the second using the command line, go to the root of the project and use the command npm start to run it.
 There are two users in the project.</p> 
