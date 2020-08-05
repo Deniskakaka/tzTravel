@@ -8,14 +8,16 @@
   <li><a href="https://redux.js.org/">REDUX</a></li>
 </ol>
 
-    In order to run the project locally, the first clone the repository the second using the command line, go to the root of the project and use the command npm start to run it.
-    There are two users in the project. 
+```In order to run the project locally, the first clone the repository the second using the command line, go to the root of the project and use the command npm start to run it.
+There are two users in the project. 
 first:
  <b>email:denis1990@mail.com</b>
  <b>password: 12345</b>
 the second one:
  <b>email:oleg1986@gmail.com</b>
  <b>password:54321</b>
-    to authenticate by typing in the email and password of one of the users. 
-    Inbound messages are stored on the server because there is no possibility to receive them in the project from where I created them myself,
-    outbound messages are created using the create button in remote messages contain all messages that were deleted from the inbound and outbound sections of the project
+to authenticate by typing in the email and password of one of the users. 
+Inbound messages are stored on the server because there is no possibility
+to receive them in the project from where I created them myself,
+outbound messages are created using the create button in remote messages contain all messages
+that were deleted from the inbound and outbound sections of the project```
